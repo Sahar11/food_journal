@@ -11,7 +11,9 @@ class HomeViewController: UITableViewController{
 
     @IBOutlet weak var search_text: UITextField!
     
-    let itemArray = ["Buy Butter", "Buy Eggs", "Go to hogwarts"]
+    let itemArray = ["Chicken  Biryani", "Pasta", "Turkey Bolognese"]
+    
+    let image = ["chbiryani","pasta", "turkey"];
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,7 +29,7 @@ class HomeViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageItemCell", for: indexPath)
         
         cell.textLabel?.text = itemArray[indexPath.row]
-        
+        cell.imageView?.image = UIImage(named: image[indexPath.row])
         return cell
     }
     

@@ -15,6 +15,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     }
     @IBAction func openCameraButton(_ sender: Any) {
+      cameraInit()
+    }
+    
+    func cameraInit() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
              let imagePicker = UIImagePickerController()
              imagePicker.delegate = self
@@ -25,6 +29,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func openLibraryButton(_ sender: Any) {
+      getPhotos()
+    }
+    
+    func getPhotos() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
                imagePicker.delegate = self
