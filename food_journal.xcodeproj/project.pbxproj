@@ -14,6 +14,7 @@
 		5CA3E673291B21BA005BA3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA3E672291B21BA005BA3B4 /* Assets.xcassets */; };
 		5CA3E676291B21BA005BA3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA3E674291B21BA005BA3B4 /* LaunchScreen.storyboard */; };
 		5CCB82132922DF6A008231F9 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB82122922DF6A008231F9 /* CameraViewController.swift */; };
+		5CCEB75A292ADAF300F10C86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEB759292ADAF300F10C86 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5CA3E675291B21BA005BA3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CA3E677291B21BA005BA3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CCB82122922DF6A008231F9 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		5CCEB759292ADAF300F10C86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				5CA3E66D291B21B8005BA3B4 /* HomeViewController.swift */,
 				5CCB82122922DF6A008231F9 /* CameraViewController.swift */,
+				5CCEB759292ADAF300F10C86 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				5CA3E66E291B21B8005BA3B4 /* HomeViewController.swift in Sources */,
 				5CCB82132922DF6A008231F9 /* CameraViewController.swift in Sources */,
 				5CA3E66A291B21B8005BA3B4 /* AppDelegate.swift in Sources */,
+				5CCEB75A292ADAF300F10C86 /* ViewController.swift in Sources */,
 				5CA3E66C291B21B8005BA3B4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +306,10 @@
 				DEVELOPMENT_TEAM = Z6NBH5PC3Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = food_journal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "food_journal Please Allow us to take pictures";
+				INFOPLIST_KEY_NSContactsUsageDescription = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -329,6 +337,10 @@
 				DEVELOPMENT_TEAM = Z6NBH5PC3Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = food_journal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "food_journal Please Allow us to take pictures";
+				INFOPLIST_KEY_NSContactsUsageDescription = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
