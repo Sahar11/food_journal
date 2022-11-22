@@ -16,6 +16,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
  
     @IBOutlet weak var imagePicked: UIImageView!
     @IBAction func onSaveButton(_ sender: Any) {
+        saveImage(imageName: "test.png")
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
@@ -63,17 +64,33 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                 self.present(imagePicker, animated: true, completion: nil)
             }
         }
+    
+    
+    func saveImage(imageName: String){
+       //create an instance of the FileManager
+       let fileManager = FileManager.default
+       //get the image path
+       let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
+       //get the image we took with camera
+       let image = imagePicked.image!
+       //get the PNG data for this image
+        let data = image.pngData()
+       //store it in the document directory
+        fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+        print(imagePath)
+    }
         
-       func saveImageInDocumentDirectory(image: UIImage, fileName: String) -> URL? {
-            
-            let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!;
-            let fileURL = documentsUrl.appendingPathComponent(fileName)
-           if let imageData = image.pngData() {
-                try? imageData.write(to: fileURL, options: .atomic)
-                return fileURL
-            }
-            return nil
-        }
+//       func saveImageInDocumentDirectory(image: UIImage, fileName: String) -> URL? {
+//
+//            let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!;
+//            let fileURL = documentsUrl.appendingPathComponent(fileName)
+//           if let imageData = image.pngData() {
+//                try? imageData.write(to: fileURL, options: .atomic)
+//                return fileURL
+//            }
+//
+//            return nil
+//        }
         
         func loadImageFromPath(path: String) -> UIImage? {
             
